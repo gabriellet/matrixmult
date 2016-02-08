@@ -1,4 +1,4 @@
-import argv from sys
+from sys import argv
 if not (len(argv) == 2 and argv[1].isdigit()):
 	print 'Usage:', argv[0], '<N>'
 	exit()
