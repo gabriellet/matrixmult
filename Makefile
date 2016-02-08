@@ -14,6 +14,12 @@ jmatrixmult: jmatrixmult.class
 jmatrixmult.class: jmatrixmult.java
 	javac jmatrixmult.java
 
+.PHONY: perf
+perf: java cmatrixmult pmatrixmult.py perf10.sh
+	./perf10.sh ./cmatrixmult
+	./perf10.sh java jmatrixmult
+	./perf10.sh python pmatrixmult.py
+
 OBJECTS = $(patsubst %.c, %.o, $(wildcard *.c))
 HEADERS = $(wildcard *.h)
 
