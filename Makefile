@@ -1,5 +1,5 @@
 LIBS =
-CFLAGS = -g -Wall
+CFLAGS = -g -Wall -O3
 
 .PHONY: default all clean
 
